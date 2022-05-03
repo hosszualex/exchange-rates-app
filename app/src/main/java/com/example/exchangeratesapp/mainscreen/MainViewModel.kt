@@ -1,4 +1,4 @@
-package com.example.exchangeratesapp
+package com.example.exchangeratesapp.mainscreen
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,21 +15,30 @@ class MainViewModel: ViewModel() {
     val isBusy: LiveData<Boolean>
         get() = _isBusy
 
+    private val _onError = MutableLiveData<ErrorResponse>()
+    val onError: LiveData<ErrorResponse>
+        get() = _onError
+
+    private val _onGetExchangePairs = MutableLiveData<List<ExchangeRates>>()
+    val onGetExchangePairs: LiveData<List<ExchangeRates>>
+        get() = _onGetExchangePairs
+
     private val repository: IExchangeRatesRepository = MockLabRepositoryImpl()
 
-
-
     fun getExchangeRates() {
+        if (_isBusy.value != null && _isBusy.value == true) {
+            return
+        }
+        _isBusy.value = true
         repository.getExchangeRates(object: IExchangeRatesRepository.IOnGetExchangeRates{
-            override fun onSuccess(
-                exchangeRates: List<ExchangeRates>,
-                exchangePairs: List<ExchangePairs>
-            ) {
-                var asd = 0;
+            override fun onSuccess(exchangeRates: List<ExchangeRates>) {
+                _isBusy.value = false
+                _onGetExchangePairs.value = exchangeRates
             }
 
             override fun onFailed(error: ErrorResponse) {
-                var asd = 0;
+                _isBusy.value = false
+                _onError.value = error
             }
 
         })
