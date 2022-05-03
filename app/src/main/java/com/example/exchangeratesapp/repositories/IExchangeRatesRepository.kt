@@ -9,7 +9,7 @@ interface IExchangeRatesRepository {
     fun getExchangeRates(listener: IOnGetExchangeRates)
 
     interface IOnGetExchangeRates{
-        fun onSuccess(exchangeRates: List<ExchangeRates>, exchangePairs: List<ExchangePairs>)
+        fun onSuccess(exchangeRates: List<ExchangeRates>)
         fun onFailed(error: ErrorResponse)
     }
 }

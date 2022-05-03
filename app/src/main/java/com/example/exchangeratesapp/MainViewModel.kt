@@ -22,9 +22,7 @@ class MainViewModel: ViewModel() {
     fun getExchangeRates() {
         repository.getExchangeRates(object: IExchangeRatesRepository.IOnGetExchangeRates{
             override fun onSuccess(
-                exchangeRates: List<ExchangeRates>,
-                exchangePairs: List<ExchangePairs>
-            ) {
+                exchangeRates: List<ExchangeRates>) {
                 var asd = 0;
             }
 
