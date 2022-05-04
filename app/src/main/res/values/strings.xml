@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">exchange-rates-app</string>
+    <string name="app_name">Exchange Rates App</string>
+    <string name="string_1">1</string>
 </resources>

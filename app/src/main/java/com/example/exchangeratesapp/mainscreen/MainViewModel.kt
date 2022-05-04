@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.exchangeratesapp.model.ErrorResponse
-import com.example.exchangeratesapp.model.ExchangePairs
 import com.example.exchangeratesapp.model.ExchangeRates
 import com.example.exchangeratesapp.repositories.IExchangeRatesRepository
 import com.example.exchangeratesapp.repositories.MockLabRepositoryImpl

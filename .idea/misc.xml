@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Projects/Android/exchange-rates-app/app/src/main/res/layout/activity_main.xml" value="0.5067934782608695" />
+        <entry key="..\:/Projects/Android/exchange-rates-app/app/src/main/res/layout/dialog_loading.xml" value="0.4805253623188406" />
         <entry key="..\:/Projects/Android/exchange-rates-app/app/src/main/res/layout/list_item_exchange_pair.xml" value="0.253531786074672" />
+        <entry key="..\:/Projects/Android/exchange-rates-app/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.32447916666666665" />
+        <entry key="..\:/Projects/Android/exchange-rates-app/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.32447916666666665" />
       </map>
     </option>
   </component>
